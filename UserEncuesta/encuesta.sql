@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-11-2020 a las 17:07:28
+-- Tiempo de generación: 24-12-2020 a las 23:59:01
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -192,16 +192,25 @@ CREATE TABLE `user` (
   `contrasena` varchar(255) DEFAULT NULL,
   `nombre` varchar(50) DEFAULT NULL,
   `apellido` varchar(50) DEFAULT NULL,
-  `codigo` varchar(10) DEFAULT NULL
+  `codigo` varchar(10) DEFAULT NULL,
+  `fecha_nacimiento` date DEFAULT NULL,
+  `sexo` text DEFAULT NULL,
+  `estado_civil` text DEFAULT NULL,
+  `domicilio` varchar(500) DEFAULT NULL,
+  `numero_telefono` bigint(10) DEFAULT NULL,
+  `carrera` text DEFAULT NULL,
+  `año_ingreso` date DEFAULT NULL,
+  `año_egreso` date DEFAULT NULL,
+  `titulado` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `user`
 --
 
-INSERT INTO `user` (`id`, `correo`, `contrasena`, `nombre`, `apellido`, `codigo`) VALUES
-(1, 'user@gmail.com', 'user', 'User', 'User', '123456'),
-(5, 'eduardofranco366@gmail.com', '1234', 'Jonathan', 'Franco', '92833');
+INSERT INTO `user` (`id`, `correo`, `contrasena`, `nombre`, `apellido`, `codigo`, `fecha_nacimiento`, `sexo`, `estado_civil`, `domicilio`, `numero_telefono`, `carrera`, `año_ingreso`, `año_egreso`, `titulado`) VALUES
+(1, 'felipesantiago414@gmail.com', 'felipesp', 'Felipe', 'Santiago Parrilla', '162Z0704', '1998-03-18', 'Hombre.', 'Soltero.', 'Tuxpan Famoso', 7831466073, 'INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN.', '2017-08-15', '2020-12-31', 'Si.'),
+(15, 'robertoparrilla@gmail.com', '1234', 'Roberto', 'Santiago Parrilla', '162Z01290', '2001-02-28', 'Masculino.', 'Soltero.', 'Tuxpan Famoso', 7831101309, 'INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN.', '2017-08-15', '2020-01-31', 'Si');
 
 --
 -- Índices para tablas volcadas
@@ -299,7 +308,7 @@ ALTER TABLE `tb_encuesta_respuesta_opcion`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
