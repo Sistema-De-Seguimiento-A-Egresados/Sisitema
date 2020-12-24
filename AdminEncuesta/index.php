@@ -6,7 +6,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Administracion De Encuesta</title>
+  <title>Encuesta - Login</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -19,13 +19,13 @@ session_start();
   <div height="100%" width="50%" align="center">
     <div class="login" style=" padding-top: 7%; width: 400px">
       <div class="login-logo">
-        <a href="index.php"><b>Sistema de Gestion de Encuesta</b></a>
+        <a href="index.php"><b>Sistema de Encuesta</b></a>
       </div>
   
       <div class="login-box-body">
         <form action="Controllers/Conexion_Login.php" method="post">
           <div class="form-group has-feedback">
-            <input type="Cuenta" name="cuenta_usuario" class="form-control" placeholder="Cuenta" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="ejemplo@gmail.com" required>
+            <input type="Cuenta" name="cuenta_usuario" class="form-control" placeholder="Correo Electronico" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="ejemplo@gmail.com" required>
               <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
@@ -46,7 +46,7 @@ session_start();
           </div>
         </form>
         <div style="text-align: left">
-            <a href="#" >Olvidé mi contraseña</a><br>
+            <a href="registro.php" >Eres nuevo? Registrate</a><br>
         </div>
       </div>
     </div>
